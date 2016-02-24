@@ -188,6 +188,19 @@
 .show-profile-content{
   opacity: 1;
 }
+//breakpoints
+@mixin breakpoint($point) {
+
+  @if $point == mama-bear {
+    @media (max-width: 1000px) { @content; }
+  }
+  @else if $point == baby-bear {
+    @media (max-width: 770px)  { @content; }
+  }
+   @else if $point == tiny-bear {
+      @media (max-width: 550px)  { @content; }
+   }
+}
 ///-------loading page css and animation----///
 #cube .front  { transform: rotateY(   0deg ); }
 #cube .back   { transform: rotateX( 180deg ); }
@@ -217,6 +230,9 @@ body{
   overflow-x: hidden;
   overflow-y: hidden;
   background-color: black;
+  @include breakpoint(tiny-bear){
+    overflow-y: visible;
+  }
 }
 //-----landing-page-pics---///
 .profile-directive{
@@ -229,6 +245,12 @@ body{
   z-index: 6;
   border: solid  15px rgba(250, 250, 250, .9);
   margin: 20px;
+  @include breakpoint(mama-bear){
+    width:80%;
+  }
+  @include breakpoint(tiny-bear){
+    width:100%;
+  }
   div{display: inline-block;}
   .blurb-award{
     width: 100%;
@@ -256,6 +278,10 @@ body{
       font-size: 2em;
       right: -8%;
       top: 150px;
+      @include breakpoint(tiny-bear){
+        transform: rotate(0deg);
+        left:20%;
+      }
     }
   }
 
@@ -263,11 +289,11 @@ body{
 
   .content-banner{
     background-color: #b46357;
-    width: 1000px;
+    width: 80%;
     height: 100px;
     position: absolute;
     left: 10%;
-    top:570px;
+    top:500px;
     z-index: 15;
     text-align: center;
     span{
@@ -285,12 +311,18 @@ body{
         width: 49%;
         float: left;
         padding: 10px;
+        @include breakpoint(tiny-bear){
+          width: 100%;
+        }
       }
       h2{
         width: 49%;
         border-left: solid white 1px;
         float: right;
         padding: 10px;
+        @include breakpoint(tiny-bear){
+          width:100%;
+        }
       }
     }
   }
@@ -308,10 +340,20 @@ body{
   left: 20px;
   font-size: 2em;
   height: 400px;
+  @include breakpoint(mama-bear){
+    left:2px;
+  }
+
+  @include breakpoint(tiny-bear){
+    top:620px;
+  }
   h1{
     color:green;
     font-size: 1em;
     transform: rotate(90deg);
+    @include breakpoint(baby-bear){
+      opacity: 0;
+    }
   }
 }
   .glyphicon-hand-right{
@@ -323,6 +365,10 @@ body{
     font-size: 2em;
     height: 400px;
     font-size: 20px;
+    @include breakpoint(mama-bear){
+      right:1px;
+    }
+
     h1{
       font-size: 1em;
       transform: rotate(90deg);
@@ -334,7 +380,10 @@ body{
   top: 200px;
   font-size: 5em;
   z-index: 8;
-  background-color: rgba(250, 250, 250, .1);
+  @include breakpoint(tiny-bear){
+    top:20px;
+  }
+  // background-color: rgba(250, 250, 250, 0);
 
 }
 .landing-pics{
@@ -343,14 +392,16 @@ body{
   width: 100%;
   height: 800px;
   margin: auto;
-  padding: 15%;
-
+  padding-left:10%;
+  padding-right: 0%;
   div{
     top: 10%;
     position: absolute;
-    width: 70%;
+    width: 80%;
     opacity: 0;
-
+    @include breakpoint(tiny-bear){
+      top:300px;
+    }
     img{
       margin: 0;
       opacity: 0;
@@ -366,6 +417,9 @@ body{
   position: absolute;
   top: 10px;
   right:100px;
+  @include breakpoint(tiny-bear){
+    right: 0px;
+  }
   li{
     text-decoration: underline;;
     width: 30%;
@@ -403,6 +457,12 @@ footer{
 }
 //photo album
 .main-div{
+  background-color: white;
+  margin-top: -20px;
+  padding-top: 0;
+  .featured-project-h1{
+    font-size: 60px;
+  }
   .hamburger-border{
     position: absolute;
     width: 50px;
@@ -456,9 +516,17 @@ footer{
   li{
     width: 15%;
     display: inline-block;
+    @include breakpoint('tiny-bear'){
+      width: 90%;
+      display: block;
+    }
     img{
       width: 100px;
       height: 100px;
+      @include breakpoint('tiny-bear'){
+        width: 400px;
+        height: auto;
+      }
     }
   }
 }
@@ -484,6 +552,7 @@ footer{
       height: 590px;
       width: 590px;
       padding: 0,10px,0,10px;
+
       img{
         width: 560px;
         height:580px;
@@ -498,6 +567,17 @@ footer{
     opacity: .5;
     background: white;
     z-index: 5;
+    @include breakpoint(mama-bear){
+      left:800px;
+    }
+    @include breakpoint(baby-bear){
+      left:500px;
+    }
+    @include breakpoint(baby-bear){
+      left:300px;
+      background:none;
+      opacity:1;
+    }
     span{
       font-size: 5em;
       top: 50%;
@@ -512,6 +592,10 @@ footer{
     opacity: .5;
     background: white;
     z-index: 5;
+    @include breakpoint(baby-bear){
+      background:none;
+      opacity:1;
+    }
     .glyphicon-menu-left{
       font-size: 5em;
       top: 50%;
@@ -551,12 +635,18 @@ footer{
   transform: rotate(45deg);
   opacity: 0;
   position: absolute;
-  left: -535px;
+  left: 45%;
   top: 200px;
   border: solid #866F48;
   padding: 50px;
   width: 300px;
   height: 300px;
+  @include breakpoint(baby-bear){
+    left:200px;
+  }
+  @include breakpoint(tiny-bear){
+    left:50px;
+  }
   ol{
     transform: rotate(-45deg);
     margin-left: 10px;
@@ -588,6 +678,13 @@ footer{
   background-color: black;
   color:white;
   top: -500px;
+  @include breakpoint(baby-bear){
+    left:100px;
+  }
+  @include breakpoint(tiny-bear){
+  left:0px;
+  width:400px;
+  }
   .glyphicon-remove{
     float: right;
     font-size: 30px;

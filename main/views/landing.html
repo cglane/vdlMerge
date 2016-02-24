@@ -1,21 +1,23 @@
 <navbar-directive ng-controller = "MainController"></navbar-directive>
-<profile-directive ng-class = "{'show-hand':!var}"ng-controller = "MainController"></profile-directive>
 
-<span class = 'copyright'>Copyright (c) 2016 Copyright Holder All Rights Reserved.</span>
+<!-- <span class = 'copyright'>Copyright (c) 2016 Copyright Holder All Rights Reserved.</span> -->
 <span ng-class = "{'show-hand':var}"ng-int = "var = true"ng-click = "var = !var;toInformationPage(var)"class = "glyphicon glyphicon-hand-left"><br> <h1>Learn More <small></small></h1></span>
 <span ng-class = "{'show-hand':!var}"ng-click = "var = !var;toInformationPage(var)"class = "glyphicon glyphicon-hand-right"><br> <h1>Continue <small></small></h1></span>
+
+<profile-directive ng-class = "{'show-hand':!var}"ng-controller = "MainController"></profile-directive>
+
 <h1 ng-class = "{'show-hand':var}"class = "vdl-banner">VDL Associates, LLC</h1>
 <div ng-class = 'slide'class="landing-pics">
-  <div id = "show1"ng-class = 'show1' ><h2>Stackpole Residence <small></small></h2>
+  <div id = "show1"ng-class = 'show1' ><h2>Country Club <small></small></h2>
     <img ng-class = 'show1'src="albums/StackpoleResidence/IMG_8452.jpg" alt="" />
   </div>
   <div ng-class = 'show2' ><h2>Bailey Island</h2>
     <img ng-class = 'show2'src="../../albums/BaileyIsland/IMG_4953.jpg" alt="" />
   </div>
-  <div ng-class = 'show3' >  <h2>Hagood Residence</h2>
+  <div ng-class = 'show3' >  <h2>South Battery</h2>
     <img ng-class = 'show3'src="../../albums/HagoodResidence/IMG_3218.jpg" alt="" />
   </div>
-  <div ng-class = 'show4' >  <h2>42 Meeting St.</h2>
+  <div ng-class = 'show4' >  <h2>Meeting St.</h2>
     <img ng-class = 'show4'src="../../albums/Meeting42/IMG_6746.jpg" alt="" />
   </div>
   <div ng-class = 'show5' >
