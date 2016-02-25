@@ -16,14 +16,14 @@
           4937,
           4957
         ],
-        HagoodResidence:[
+        SouthBattery:[
           3199,
           3221
         ]
       }
       var getAlbums = function(){
         console.log('getAlbum');
-        var albumObject = {StackpoleResidence:[],Meeting42:[],BaileyIsland:[],HagoodResidence:[]}
+        var albumObject = {StackpoleResidence:[],Meeting42:[],BaileyIsland:[],SouthBattery:[]}
           _.each(albumRange,function(num,name){
             for (var i = 0; i < 13; i++) {
               var randomNum = Math.floor(Math.random() * (num[1] - num[0] + 1)) + num[0];

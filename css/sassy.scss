@@ -307,23 +307,24 @@ body{
       font-weight: lighter;
       padding: 10px;
       letter-spacing: 5px;
-      h1{
-        width: 49%;
-        float: left;
+      h3{
+        width: 40%;
+        display: inline-block;
+        vertical-align: top;
         padding: 10px;
         @include breakpoint(tiny-bear){
           width: 100%;
         }
       }
-      h2{
-        width: 49%;
-        border-left: solid white 1px;
-        float: right;
-        padding: 10px;
-        @include breakpoint(tiny-bear){
-          width:100%;
-        }
-      }
+      // h2{
+      //   width: 49%;
+      //   border-left: solid white 1px;
+      //   float: left;
+      //   padding: 10px;
+      //   @include breakpoint(tiny-bear){
+      //     width:100%;
+      //   }
+      // }
     }
   }
 }

@@ -437,20 +437,13 @@ body {
       font-weight: lighter;
       padding: 10px;
       letter-spacing: 5px; }
-      .profile-directive .content-banner .expanded-profile h1 {
-        width: 49%;
-        float: left;
+      .profile-directive .content-banner .expanded-profile h3 {
+        width: 40%;
+        display: inline-block;
+        vertical-align: top;
         padding: 10px; }
         @media (max-width: 550px) {
-          .profile-directive .content-banner .expanded-profile h1 {
-            width: 100%; } }
-      .profile-directive .content-banner .expanded-profile h2 {
-        width: 49%;
-        border-left: solid white 1px;
-        float: right;
-        padding: 10px; }
-        @media (max-width: 550px) {
-          .profile-directive .content-banner .expanded-profile h2 {
+          .profile-directive .content-banner .expanded-profile h3 {
             width: 100%; } }
 
 .copyright {

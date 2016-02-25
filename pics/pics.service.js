@@ -6,24 +6,24 @@
       var albumRange = {
         StackpoleResidence:[
           8452,
-          8466
+          8468
         ],
         Meeting42:[
           6725,
-          6741
+          6748
         ],
         BaileyIsland:[
           4937,
-          4951
+          4957
         ],
-        HagoodResidence:[
+        SouthBattery:[
           3199,
           3214
         ]
       }
       var getAlbums = function(){
         console.log('getAlbum');
-        var albumObject = {StackpoleResidence:[],Meeting42:[],BaileyIsland:[],HagoodResidence:[]}
+        var albumObject = {StackpoleResidence:[],Meeting42:[],BaileyIsland:[],SouthBattery:[]}
           _.each(albumRange,function(num,name){
             for (var i = 0; i < 13; i++) {
               var randomNum = Math.floor(Math.random() * (num[1] - num[0] + 1)) + num[0];

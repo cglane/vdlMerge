@@ -11,7 +11,7 @@ angular
     console.log($state)
     var typePic = $state.params.typePic;
     if(typePic === 'historic'){
-      $scope.albums= ['Meeting42','HagoodResidence'];
+      $scope.albums= ['Meeting42','SouthBattery'];
 
     }else if(typePic === 'residential'){
       $scope.albums= ['StackpoleResidence','BaileyIsland'];
@@ -34,7 +34,7 @@ angular
         $state.go('pics.carousel',{album: $scope.album,startLocation:index});
       }
       $scope.moveDown = function(){
-        $scope.albums= ['StackpoleResidence','Meeting42','BaileyIsland','HagoodResidence'];
+        $scope.albums= ['StackpoleResidence','Meeting42','BaileyIsland','SouthBattery'];
         $('.main-div').css('margin-top','0px');
         $state.go('pics');
 
