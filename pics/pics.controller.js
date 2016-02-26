@@ -26,7 +26,7 @@ angular
     $scope.album = $stateParams.album; //getting fooVal
 
     //changing state
-
+    //changes
 
       $scope.moveUp = function(index){
         console.log('move-up')
