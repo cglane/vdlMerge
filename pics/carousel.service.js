@@ -31,7 +31,7 @@
           _.each(albumRange,function(num,name){
             for (var i = 0; i < 13; i++) {
               var randomNum = Math.floor(Math.random() * (num[1] - num[0] + 1)) + num[0];
-              var currPic = 'IMG_'+randomNum+'.jpg'
+              var currPic = 'IMG_'+randomNum+'.JPG'
               if(!_.contains(albumObject[name],currPic)){
                 // checkPics(albumObject,name,currPic)
                 albumObject[name].push(currPic);
