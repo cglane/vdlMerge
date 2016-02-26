@@ -720,7 +720,7 @@ footer {
   .menu-directive li {
     color: #AC8E5D;
     opacity: .7;
-    margin-top: 20px;
+    margin-top: 5px;
     font-size: 30px; }
     .menu-directive li a {
       text-decoration: none;
@@ -728,6 +728,13 @@ footer {
     .menu-directive li:hover {
       opacity: 1;
       font-weight: bold; }
+  .menu-directive .close-menu {
+    position: absolute;
+    top: 180px;
+    left: 55px;
+    color: black;
+    font-size: 50px;
+    color: #AC8E5D; }
 
 .contact-wrapper {
   transition: 1s;

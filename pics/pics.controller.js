@@ -14,7 +14,7 @@ angular
       $scope.albums= ['Meeting42','SouthBattery'];
 
     }else if(typePic === 'residential'){
-      $scope.albums= ['StackpoleResidence','BaileyIsland'];
+      $scope.albums= ['StackpoleResidence','BaileyIsland','Walterboro'];
 
     }else if(typePic === 'commercial'){
       $scope.albums= [];
@@ -34,7 +34,7 @@ angular
         $state.go('pics.carousel',{album: $scope.album,startLocation:index});
       }
       $scope.moveDown = function(){
-        $scope.albums= ['StackpoleResidence','Meeting42','BaileyIsland','SouthBattery'];
+        $scope.albums= ['StackpoleResidence','Meeting42','BaileyIsland','SouthBattery','Walterboro'];
         $('.main-div').css('margin-top','0px');
         $state.go('pics');
 

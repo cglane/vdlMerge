@@ -659,12 +659,20 @@ footer{
     }
     color:#AC8E5D;
     opacity: .7;
-    margin-top: 20px;
+    margin-top: 5px;
     font-size: 30px;
     &:hover{
       opacity: 1;
       font-weight: bold;
     }
+  }
+  .close-menu{
+    position: absolute;
+    top:180px;
+    left: 55px;
+    color:black;
+    font-size: 50px;
+    color:#AC8E5D;
   }
 }
 .contact-wrapper{

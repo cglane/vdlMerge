@@ -8,12 +8,11 @@ angular
 
 
   //..
-  console.log($state)
 
     $scope.state = $state.current;
     $scope.params = $state;
     //---------------- carousel--------//
-    $scope.albums= ['StackpoleResidence','Meeting42','BaileyIsland','HagoodResidence'];
+    $scope.albums= ['StackpoleResidence','Meeting42','BaileyIsland','HagoodResidence','Walterboro'];
     // $('<img src= ../../albums/HagoodResidence/IMG_3304.jpg>').error(function(){
     //   console.log('error')
     // });

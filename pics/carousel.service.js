@@ -19,11 +19,15 @@
         SouthBattery:[
           3199,
           3221
+        ],
+        Walterboro:[
+          233,
+          252
         ]
       }
       var getAlbums = function(){
         console.log('getAlbum');
-        var albumObject = {StackpoleResidence:[],Meeting42:[],BaileyIsland:[],SouthBattery:[]}
+        var albumObject = {StackpoleResidence:[],Meeting42:[],BaileyIsland:[],SouthBattery:[],Walterboro:[]}
           _.each(albumRange,function(num,name){
             for (var i = 0; i < 13; i++) {
               var randomNum = Math.floor(Math.random() * (num[1] - num[0] + 1)) + num[0];

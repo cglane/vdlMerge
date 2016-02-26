@@ -18,6 +18,7 @@
     <li ><a ui-sref="landing">Main</a> </li>
     <li ng-click = "showContact(true)">Contact</li>
     <li ng-click= "showMenu(!menu);moveDown()">Album</a> </li>
+    <span class = 'close-menu' ng-click = 'showMenu(false)'>X</span>
   </ol>
 </div>
 <contact-directive ng-controller = 'PicsController'></contact-directive>
